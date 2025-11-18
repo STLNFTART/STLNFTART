@@ -14,7 +14,7 @@ const STLNFTART = {
 
     technologies: {
 
-        blockchain: ["Ethereum", "Solidity", "Hardhat", "Web3.js", "Ethers.js"],
+        blockchain: ["Ethereum", "Solidity", "Hardhat", "Web3.js", "Ethers.js"] [Apl] [Prolog] [D-Lang]
 
         languages: ["JavaScript", "TypeScript", "Solidity", "Python"],
 
