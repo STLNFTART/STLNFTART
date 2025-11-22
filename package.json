@@ -1,0 +1,23 @@
+{
+  "name": "primal-rwa-vault",
+  "version": "1.0.0",
+  "description": "Real World Asset tokenization platform backed by PRIM - nbaybt.eth",
+  "author": "Donte Lightfoot <nbaybt.eth>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "verify": "hardhat verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "@chainlink/contracts": "^1.0.0",
+    "dotenv": "^16.3.1"
+  }
+}
