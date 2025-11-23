@@ -4,8 +4,24 @@ require("dotenv").config();
 /**
  * @title Multi-Chain Hardhat Configuration
  * @notice Supports Ethereum, Base (Coinbase L2), Hedera, and more
- * @dev Built by nbaybt.eth
+ * @dev Built by nbaybt.eth | 314lightfoot.hbar
  */
+
+// Helper to validate private key
+function getAccounts() {
+  const pk = process.env.PRIVATE_KEY || process.env.HEDERA_PRIVATE_KEY;
+  // Only use if it's a valid length (64 chars for 32 bytes)
+  if (pk && pk.length === 64) {
+    return [pk];
+  }
+  // Also accept with 0x prefix
+  if (pk && pk.startsWith('0x') && pk.length === 66) {
+    return [pk];
+  }
+  return []; // Return empty array for compilation without deployment
+}
+
+const accounts = getAccounts();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -29,12 +45,12 @@ module.exports = {
     // ========================================================================
     sepolia: {
       url: process.env.SEPOLIA_RPC_URL || "https://rpc.sepolia.org",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 11155111,
     },
     mainnet: {
       url: process.env.MAINNET_RPC_URL || "https://eth.llamarpc.com",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 1,
     },
 
@@ -43,13 +59,13 @@ module.exports = {
     // ========================================================================
     "base-sepolia": {
       url: process.env.BASE_SEPOLIA_RPC_URL || "https://sepolia.base.org",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 84532,
       gasPrice: 1000000000, // 1 gwei
     },
     "base-mainnet": {
       url: process.env.BASE_MAINNET_RPC_URL || "https://mainnet.base.org",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 8453,
       gasPrice: 1000000000, // 1 gwei
     },
@@ -59,15 +75,13 @@ module.exports = {
     // ========================================================================
     "hedera-testnet": {
       url: process.env.HEDERA_TESTNET_RPC_URL || "https://testnet.hashio.io/api",
-      accounts: process.env.HEDERA_PRIVATE_KEY || process.env.PRIVATE_KEY ?
-        [process.env.HEDERA_PRIVATE_KEY || process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 296, // Hedera testnet
     },
     "hedera-mainnet": {
       url: process.env.HEDERA_MAINNET_RPC_URL || "https://mainnet.hashio.io/api",
-      accounts: process.env.HEDERA_PRIVATE_KEY || process.env.PRIVATE_KEY ?
-        [process.env.HEDERA_PRIVATE_KEY || process.env.PRIVATE_KEY] : [],
-      chainId: 295, // Hedera mainnet
+      accounts: accounts,
+      chainId: 295, // Hedera mainnet - 314lightfoot.hbar
     },
 
     // ========================================================================
@@ -75,17 +89,17 @@ module.exports = {
     // ========================================================================
     arbitrum: {
       url: process.env.ARBITRUM_RPC_URL || "https://arb1.arbitrum.io/rpc",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 42161,
     },
     optimism: {
       url: process.env.OPTIMISM_RPC_URL || "https://mainnet.optimism.io",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 10,
     },
     polygon: {
       url: process.env.POLYGON_RPC_URL || "https://polygon-rpc.com",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 137,
     },
   },

@@ -9,22 +9,16 @@
     "test": "hardhat test",
     "test:gas": "REPORT_GAS=true hardhat test",
     "coverage": "hardhat coverage",
-
     "deploy": "hardhat run scripts/deploy-multichain.js",
-
     "deploy:eth:sepolia": "hardhat run scripts/deploy-multichain.js --network sepolia",
     "deploy:eth:mainnet": "hardhat run scripts/deploy-multichain.js --network mainnet",
-
     "deploy:base:testnet": "hardhat run scripts/deploy-multichain.js --network base-sepolia",
     "deploy:base:mainnet": "hardhat run scripts/deploy-multichain.js --network base-mainnet",
-
     "deploy:hedera:testnet": "hardhat run scripts/deploy-multichain.js --network hedera-testnet",
     "deploy:hedera:mainnet": "hardhat run scripts/deploy-multichain.js --network hedera-mainnet",
-
     "deploy:arbitrum": "hardhat run scripts/deploy-multichain.js --network arbitrum",
     "deploy:optimism": "hardhat run scripts/deploy-multichain.js --network optimism",
     "deploy:polygon": "hardhat run scripts/deploy-multichain.js --network polygon",
-
     "verify": "hardhat verify"
   },
   "devDependencies": {
@@ -32,8 +26,8 @@
     "hardhat": "^2.19.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.1",
     "@chainlink/contracts": "^1.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
     "dotenv": "^16.3.1"
   }
 }
