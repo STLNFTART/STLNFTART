@@ -2,7 +2,7 @@
 
 **Production-grade Real World Asset (RWA) tokenization platform**
 
-Built by **Donte Lightfoot** | **nbaybt.eth**
+Built by **Donte Lightfoot** | **nbaybt.eth** | **314lightfoot.hbar**
 
 ---
 
@@ -257,6 +257,7 @@ Recommended auditors:
 **Donte Lightfoot**
 
 🔗 **ENS:** nbaybt.eth
+🔗 **Hedera:** 314lightfoot.hbar
 📍 **Location:** St. Louis, Missouri
 💼 **Focus:** Smart Contracts & DeFi Protocols
 🌐 **Expertise:** Blockchain, Web3, NFTs, RWA Tokenization
@@ -306,15 +307,17 @@ This software is provided "as is" without warranty. Real-world asset tokenizatio
 ## 📞 **Contact & Support**
 
 - **ENS:** nbaybt.eth
-- **GitHub:** [github.com/yourusername](https://github.com/yourusername)
-- **Issues:** [Submit an issue](https://github.com/yourusername/STLNFTART/issues)
+- **Hedera:** 314lightfoot.hbar
+- **Hedera Account:** 0.0.3943340
+- **GitHub:** [github.com/STLNFTART](https://github.com/STLNFTART)
+- **Issues:** [Submit an issue](https://github.com/STLNFTART/STLNFTART/issues)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by nbaybt.eth**
+**Built with ❤️ by nbaybt.eth | 314lightfoot.hbar**
 
-*Bridging Traditional Finance and DeFi*
+*Bridging Traditional Finance and DeFi Across All Chains*
 
 </div>

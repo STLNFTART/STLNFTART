@@ -1,6 +1,6 @@
 # Multi-Chain Deployment Guide 🌐
 
-**Built by nbaybt.eth (Donte Lightfoot)**
+**Built by nbaybt.eth | 314lightfoot.hbar (Donte Lightfoot)**
 
 ---
 
@@ -284,7 +284,7 @@ All networks support the **USTreasuryModule** for tokenizing:
 ## 📞 **Support**
 
 - **ENS:** nbaybt.eth
-- **Hedera:** [Your Hedera domain - pending]
+- **Hedera:** 314lightfoot.hbar (Account: 0.0.3943340)
 - **GitHub:** [Submit an issue](https://github.com/STLNFTART/STLNFTART/issues)
 
 ---
@@ -301,8 +301,8 @@ All networks support the **USTreasuryModule** for tokenizing:
 
 <div align="center">
 
-**Built with ❤️ by nbaybt.eth**
+**Built with ❤️ by nbaybt.eth | 314lightfoot.hbar**
 
-*Bringing $300+ Trillion On-Chain*
+*Bringing $300+ Trillion On-Chain Across All Networks*
 
 </div>
